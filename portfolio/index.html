@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <div class="background">
+            <div class="nav">
+                <a href="#" class="a active">HOME</a>
+                <a href="#" class="b">ABOUT ME</a>
+                <a href="#" class="c">GALLERY</a>
+                <a href="#" class="d">CONTACT US</a>
+            </div>
+    
+        </div> 
+        <div class="content">
+            <div class="home">
+                <h1>I Am Amit Dutta</h1>
+                <h3>Web Developer</h1>
+            </div>
+            <div class="aboutus">
+                
+                    <p>Hello I am <b>Amit Dutta</b> <br> Lorem ipsum dolor <b>sit</b>, amet consectetur adipisicing elit. Consequuntur, odit? Possimus doloribus nulla consequatur nobis, officia a molestiae dolorem vitae fugit accusantium, veniam suscipit sed ipsum cum. Aut, porro ducimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit excepturi esse soluta nisi sint amet, nulla iste illum dolorem ipsa maiores? Nihil, aliquid atque inventore molestiae perspiciatis harum perferendis voluptates.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, <br>  <b>laudantium</b> Laudantium quaerat, explicabo enim suscipit dolores, reprehenderit accusamus laboriosam molestias ullam atque beatae voluptas dolorum vel obcaecati adipisci quia. Pariatur? <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur culpa earum ab voluptatem reiciendis quia, tenetur quo. Facilis sequi optio dolorem quidem, quasi quos, reiciendis repudiandae enim culpa aliquid illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic recusandae ut, quis distinctio, laudantium illo quam nulla accusantium quas deleniti similique, voluptatibus animi. Dolore temporibus inventore officia quasi error.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <b> Mollitia, odit</b>  </p>
+            </div>
+            <div class="gallery">
+                <div class="images">
+                    <img src="img/img/unsamples/7ChOwv4woi8.jpg" alt="">
+                </div>
+                <div class="images">
+                        <img src="img/img/unsamples/A7BD1uXltj4.jpg" alt="">
+                </div>
+                    <div class="images">
+                    <img src="img/img/unsamples/GKJlkbPW7JE.jpg" alt="">
+                </div>
+                <div class="images">
+                    <img src="img/img/unsamples/Lt-MGfI8vjs.jpg" alt="">
+                </div>
+                <div class="images"> 
+                    <img src="img/img/unsamples/PKW0KMId1lo.jpg" alt="">
+                </div>
+                
+                <div class="images">
+                    <img src="img/img/unsamples/PS3UrEmiKms.jpg" alt="">
+                </div>
+                <div class="images">
+                    <img src="img/img/unsamples/RIwKjm3TVMU.jpg" alt="">
+                </div>
+                <div class="images"> 
+                    <img src="img/img/unsamples/Re-_rHb9-f4.jpg" alt="">
+                </div>
+                <div class="images">
+                    <img src="img/img/unsamples/TYSL0UpUaXU.jpg" alt="">
+                </div>
+                <div class="images">
+                    <img src="img/img/unsamples/Z33d85enIBI.jpg" alt="">
+                </div>
+                <div class="images"> 
+                    <img src="img/img/unsamples/_OFsLC42yaA.jpg" alt="">
+                </div>
+                <div class="images"> 
+                   <img src="img/img/unsamples/ciVuEkjOotE.jpg" alt="">
+                </div>
+            </div>
+            <div class="contactus">
+                <div class="form">
+                    <form action="" method="POST">
+                        <input type="text" class="inputtext" name="" value="First Name">
+                        <input type="text" class="inputtext" name="" value="Last Name">
+                        <input type="text"  class="inputtext" name="" value="Your Email">
+                        <textarea name="" id="" class="inputmessage" cols="4" rows="6">Your Message...!</textarea>
+                        <input type="button" name="" value="SEND" class="submit">
+                    </form>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js" integrity="sha256-aL06cXkAHBsVHteJnhSJy9aF3aR4BxwD38ityFHhb4k=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+                $(".background").ripples({
+                    dropRadius:10,
+                    perturbance:0.01 //Reflection
+                });
+        });
+    
+    
+    </script>   
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $('a').click(function(){
+            //alert("i am clicked");
+                var selected = $(this);
+                $('a').removeClass('active');
+                $(selected).addClass('active');
+                
+
+            });
+            var $a = $('.a'),
+            $b = $('.b'),
+            $c = $('.c'),
+            $d = $('.d'),
+            $home = $('.home'),
+            $aboutus = $('.aboutus'),
+            $gallery = $('.gallery'),
+            $contactus = $('.contactus');
+
+            $a.click(function(){
+                $home.fadeIn();
+                $aboutus.fadeOut();
+                $gallery.fadeOut();
+                $contactus.fadeOut();
+
+            });
+            $b.click(function(){
+                $home.fadeOut();
+                $aboutus.fadeIn();
+                $contactus.fadeOut();
+                $gallery.fadeOut();
+
+            });
+            $c.click(function(){
+                $home.fadeOut();
+                $aboutus.fadeOut();
+                $contactus.fadeOut();
+                $gallery.fadeIn();
+
+            });
+            $d.click(function(){
+                $home.fadeOut();
+                $aboutus.fadeOut();
+                $gallery.fadeOut();
+                $contactus.fadeIn();
+
+            });
+            
+        });
+            
+            
+    </script>
+</body>
+</html>
